@@ -28,6 +28,6 @@ defmodule Dashboard.Jobs do
   end
 
   defp provider do
-    Application.get_env(:dashboard, :provider, Dashboard.Jobs.Providers.GitHub)
+    Application.get_env(:api, :provider, Dashboard.Jobs.Providers.GitHub)
   end
 end
