@@ -1,7 +1,7 @@
 defmodule Dashboard.Jobs do
-  alias Dashboard.{Repo, Jobs}
+  alias Dashboard.Repo
   import Ecto.Query
-  alias Dashboard.Jobs.{JobPosting, JobCondition, Provider}
+  alias Dashboard.Jobs.{JobPosting, JobCondition}
 
   def list_conditions do
     Repo.all(JobCondition)
