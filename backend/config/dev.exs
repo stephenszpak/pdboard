@@ -1,11 +1,11 @@
 import Config
 
-config :api, Dashboard.Repo,
-  database: "personal_dashboard_dev",
-  username: "postgres",
-  password: "postgres",
+config :dashboard, Dashboard.Repo,
+  username: "dashboard",
+  password: "abc123",
+  database: "dashboard_dev",
   hostname: "localhost",
-  show_sensitive_data_on_connection_error: true,
+  port: 5432,
   pool_size: 10
 
 config :api, DashboardWeb.Endpoint,

@@ -1,7 +1,7 @@
 import Config
 
 database_url = System.get_env("DATABASE_URL") ||
-  "ecto://postgres:postgres@localhost/personal_dashboard_dev"
+  "ecto://dashboard:abc123@localhost:5432/dashboard_dev"
 
 config :api, Dashboard.Repo,
   url: database_url,
