@@ -3,7 +3,7 @@ defmodule DashboardWeb do
     quote do
       use Phoenix.Controller, namespace: DashboardWeb
       import Plug.Conn
-      import DashboardWeb.Gettext
+      use Gettext, backend: DashboardWeb.Gettext
     end
   end
 
@@ -42,7 +42,7 @@ defmodule DashboardWeb do
 
   def gettext do
     quote do
-      import DashboardWeb.Gettext
+      use Gettext, backend: DashboardWeb.Gettext
     end
   end
 
