@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { client } from './lib/apollo'
 import App from './App'
+import '@design-system/design-system.css'
 import './index.scss'
 
 const queryClient = new QueryClient()
