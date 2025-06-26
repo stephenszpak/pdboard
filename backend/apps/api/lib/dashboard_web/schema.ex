@@ -1,5 +1,6 @@
 defmodule DashboardWeb.Schema do
   use Absinthe.Schema
+  import_types Absinthe.Type.Custom
   alias Dashboard.Jobs
 
   object :job_posting do
