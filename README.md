@@ -20,6 +20,12 @@ To start the API server run:
 cd backend && mix phx.server
 ```
 
+To run the API and frontend together during development, use the Makefile:
+
+```bash
+make dev-all
+```
+
 ## Testing
 
 Execute tests from the `backend` directory:
