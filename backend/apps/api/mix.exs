@@ -32,6 +32,7 @@ defmodule Api.MixProject do
       {:gettext, "~> 0.20"},
       {:absinthe, "~> 1.7"},
       {:absinthe_plug, "~> 1.5"},
+      {:absinthe_phoenix, "~> 2.0"},
       {:oban, "~> 2.17"},
       {:finch, "~> 0.16"},
       {:jason, "~> 1.4"},
