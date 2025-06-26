@@ -1,0 +1,47 @@
+/* 12-column responsive grid system */
+$grid-columns: 12 !default;
+$grid-gutter: 1rem !default;
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+@mixin grid-base {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols, #{$grid-columns}), 1fr);
+    gap: $grid-gutter;
+  }
+  .auto-cols {
+    grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
+  }
+  .col-fit {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@mixin col-utils($bp: $breakpoints) {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} { grid-column: span #{$i}; }
+  }
+
+  @each $name, $width in $bp {
+    @media (min-width: $width) {
+      @for $i from 1 through $grid-columns {
+        .col-#{$name}-#{$i} { grid-column: span #{$i}; }
+      }
+    }
+  }
+}
+
+@mixin make-col($size, $span) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+      grid-column: span $span;
+    }
+  } @else {
+    grid-column: span $span;
+  }
+}

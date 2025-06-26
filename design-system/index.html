@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Demo</title>
+  <link rel="stylesheet" href="design-system.css">
+</head>
+<body>
+  <nav class="navbar">
+    <span class="navbar__title">Design System</span>
+    <div class="navbar__actions">
+      <button class="navbar__theme-toggle" aria-label="Toggle theme" data-theme-toggle>🌓</button>
+    </div>
+  </nav>
+
+  <div class="layout">
+    <aside class="sidebar" aria-expanded="true">
+      <button class="sidebar__toggle" data-sidebar-toggle>☰</button>
+      <ul class="sidebar__nav">
+        <li class="sidebar__item sidebar__item--active">Home</li>
+        <li class="sidebar__item">Link</li>
+      </ul>
+    </aside>
+
+    <main class="main-content" style="padding: var(--space-lg);">
+      <section>
+        <h2>Buttons</h2>
+        <button class="button button--primary">Primary</button>
+        <button class="button button--secondary">Secondary</button>
+        <button class="button" disabled>Disabled</button>
+      </section>
+
+      <section style="margin-top: var(--space-lg);">
+        <h2>Card Grid</h2>
+        <div class="grid auto-cols">
+          <div class="card col-12 col-md-6 col-lg-4">
+            <h3 class="card__title">Card 1</h3>
+            <p class="card__content">Simple card content.</p>
+          </div>
+          <div class="card card--interactive col-12 col-md-6 col-lg-4 dropdown">
+            <h3 class="card__title">Card 2 with Dropdown</h3>
+            <button class="dropdown__toggle">Menu</button>
+            <ul class="dropdown__menu">
+              <li class="dropdown__item">Action 1</li>
+              <li class="dropdown__item">Action 2</li>
+            </ul>
+          </div>
+          <div class="card col-12 col-md-6 col-lg-4">
+            <h3 class="card__title">Card 3</h3>
+            <p class="card__content">Another card.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./src/js/init.js"></script>
+</body>
+</html>

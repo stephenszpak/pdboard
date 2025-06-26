@@ -1,0 +1,7 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass src/scss/index.scss design-system.css"
+  }
+}
