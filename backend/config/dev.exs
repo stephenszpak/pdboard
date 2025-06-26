@@ -1,6 +1,6 @@
 import Config
 
-config :dashboard, Dashboard.Repo,
+config :api, Dashboard.Repo,
   username: "dashboard",
   password: "abc123",
   database: "dashboard_dev",
