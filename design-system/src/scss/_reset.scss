@@ -1,0 +1,28 @@
+/* Modern normalize reset (simplified) */
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+main {
+  display: block;
+}
+
+h1,h2,h3,h4,h5,h6,p,figure { margin: 0; }
+
+ul[role='list'], ol[role='list'] { padding: 0; }
+
+a { text-decoration: none; color: inherit; }
+
+button { font: inherit; }
