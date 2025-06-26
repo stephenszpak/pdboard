@@ -2,7 +2,7 @@ defmodule Dashboard.Jobs.Providers.GitHub do
   @behaviour Dashboard.Jobs.Provider
   require Logger
 
-  @endpoint Application.compile_env(:dashboard, :github_jobs_endpoint, "https://ghjobs.io/api/v1/jobs")
+  @endpoint Application.compile_env(:api, :github_jobs_endpoint, "https://ghjobs.io/api/v1/jobs")
 
   def fetch(keyword) do
     url = "#{@endpoint}?search=#{URI.encode(keyword)}"

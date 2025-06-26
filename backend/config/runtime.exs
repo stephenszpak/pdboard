@@ -18,5 +18,5 @@ config :api, Oban,
   plugins: [{Oban.Plugins.Cron, crontab: [{"@hourly", Dashboard.Jobs.Cron}]}],
   queues: [default: 10]
 
-config :dashboard, :github_jobs_endpoint,
+config :api, :github_jobs_endpoint,
   System.get_env("GITHUB_JOBS_ENDPOINT") || "https://ghjobs.io/api/v1/jobs"
