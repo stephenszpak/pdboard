@@ -30,7 +30,7 @@ defmodule Api.MixProject do
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
       {:absinthe, "~> 1.7"},
-      {:absinthe_plug, "~> 1.7"},
+      {:absinthe_plug, "~> 1.5"},
       {:oban, "~> 2.17"},
       {:finch, "~> 0.16"},
       {:jason, "~> 1.4"},
