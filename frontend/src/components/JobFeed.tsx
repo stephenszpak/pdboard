@@ -48,13 +48,13 @@ export function JobFeed({ conditionId }: { conditionId: string }) {
   if (!data) return <p>Loading...</p>
 
   return (
-    <ul className="space-y-2">
+    <ul className="jobfeed" role="list">
       {data.map((p: any) => (
-        <li key={p.id} className="border-b border-gray-700 pb-1">
-          <a href={p.url} className="underline" target="_blank" rel="noreferrer">
+        <li key={p.id} className="jobfeed__item">
+          <a href={p.url} className="jobfeed__link" target="_blank" rel="noreferrer">
             {p.title}
           </a>
-          {p.company && <span className="text-sm text-gray-400"> - {p.company}</span>}
+          {p.company && <span className="jobfeed__company"> - {p.company}</span>}
         </li>
       ))}
     </ul>
